@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    //prise en charge express
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "es6",
+    "strict": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
