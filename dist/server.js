@@ -4,14 +4,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const parkings = require('../features/parkings.json');
 class Server {
     constructor(port) {
         this.port = port;
     }
     start() {
         const app = (0, express_1.default)();
+        app.get('/parkings', function (req, res) {
+            res.send('Liste des parkings');
+        });
         app.get('/', function (req, res) {
-            res.send('Salut les gens');
+            res.send('Salut');
         });
         app.listen(this.port, function () {
             console.log('Serveur démarré');
